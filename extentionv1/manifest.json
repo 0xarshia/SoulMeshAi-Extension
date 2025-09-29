@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Selection Copy Button + Overlay",
+  "version": "1.0",
+  "description": "Shows a copy button over selected text and also a toggleable overlay",
+  "permissions": ["scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Toggle Overlay"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
